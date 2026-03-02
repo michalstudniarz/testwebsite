@@ -197,9 +197,7 @@ export default function HomePage() {
           text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
         }
       `}</style>
-
       <Header />
-
       {/* --- HERO SECTION: The Command Center --- */}
       <section id="home" className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         <GridBackground />
@@ -338,7 +336,6 @@ export default function HomePage() {
           </div>
         </motion.div>
       </section>
-
       {/* --- ABOUT SECTION: The Operator Profile --- */}
       <section id="about" className="relative w-full py-32 bg-charcoal-background overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-mid-gray-background/10 skew-x-12 transform origin-top-right" />
@@ -373,7 +370,7 @@ export default function HomePage() {
 
             {/* Content Column */}
             <div className="lg:col-span-7">
-              <SectionHeading title="Operator Profile" subtitle="From Finance to Firewall: A calculated trajectory into IT Infrastructure." />
+              <SectionHeading title="Operator Profile" subtitle="From Engineering to Firewall: A calculated trajectory into IT Infrastructure." />
               
               <div className="space-y-8 font-paragraph text-lg text-foreground/80 leading-relaxed">
                 <motion.p
@@ -382,9 +379,7 @@ export default function HomePage() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                   className="first-letter:text-5xl first-letter:font-bold first-letter:text-light-cyan-accent first-letter:mr-3 first-letter:float-left"
-                >
-                  Welcome to my digital command center. I am Michal, an IT Systems and Network Administrator operating out of Southend-on-Sea. My mission is simple: to build the invisible, resilient structures that power the modern world.
-                </motion.p>
+                >Welcome to my digital command center. I am Michal, an IT Systems and Network Administrator operating out of UK. My mission is simple: to build the invisible, resilient structures that power the modern world.</motion.p>
                 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -394,9 +389,7 @@ export default function HomePage() {
                   className="p-6 border-l-2 border-electric-blue-accent bg-mid-gray-background/30"
                 >
                   <h3 className="text-electric-blue-accent font-heading font-bold mb-2">The Pivot</h3>
-                  <p>
-                    My journey represents a deliberate recalibration from the financial sector to IT. This background provides me with a unique analytical lens—viewing network architecture not just as cables and code, but as critical assets requiring risk management, precision, and strategic foresight.
-                  </p>
+                  <p>My journey represents a deliberate recalibration from the  sector to IT. This background provides me with a unique analytical lens—viewing network architecture not just as cables and code, but as critical assets requiring risk management, precision, and strategic foresight.</p>
                 </motion.div>
 
                 <motion.p
@@ -404,9 +397,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
-                >
-                  I specialize in the triad of modern infrastructure: <strong>Network Segmentation</strong>, <strong>Cloud Virtualization</strong>, and <strong>Defensive Cybersecurity</strong>. My home lab is my proving ground—a continuous integration environment where enterprise-grade technologies are tested, broken, and rebuilt stronger.
-                </motion.p>
+                >My journey represents a deliberate recalibration from the Mechanical Engineering sector to IT. This background provides me with a unique analytical lens—viewing network architecture not just as cables and code, but as critical assets requiring risk management, precision, and strategic foresight.</motion.p>
 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -437,7 +428,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- IT SECTORS: Active Modules --- */}
       <section id="sectors" className="relative w-full py-32 bg-background">
         <GridBackground />
@@ -447,9 +437,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {isLoadingSectors ? (
               // Loading Skeleton
-              [...Array(6)].map((_, i) => (
+              ([...Array(6)].map((_, i) => (
                 <div key={i} className="h-64 bg-mid-gray-background/20 animate-pulse rounded-lg border border-white/5" />
-              ))
+              )))
             ) : sectors.length > 0 ? (
               sectors.map((sector, index) => {
                 const IconComponent = getSectorIcon(sector.sectorName || '');
@@ -512,7 +502,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- PROJECTS & HOME LAB: Operation Logs --- */}
       <section id="projects" className="relative w-full py-32 bg-charcoal-background">
         <div className="max-w-[120rem] mx-auto px-6 md:px-12 lg:px-24">
@@ -649,7 +638,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- CERTIFICATIONS: Clearance Levels --- */}
       <section id="certifications" className="relative w-full py-32 bg-background overflow-hidden">
         <div className="absolute inset-0 opacity-30">
@@ -737,7 +725,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- CONTACT: Establish Uplink --- */}
       <section id="contact" className="relative w-full py-32 bg-charcoal-background">
         <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
@@ -812,7 +799,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
