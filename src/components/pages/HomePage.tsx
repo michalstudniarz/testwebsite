@@ -388,8 +388,7 @@ export default function HomePage() {
                   transition={{ delay: 0.3 }}
                   className="p-6 border-l-2 border-electric-blue-accent bg-mid-gray-background/30"
                 >
-                  <h3 className="text-electric-blue-accent font-heading font-bold mb-2">The Pivot</h3>
-                  <p>My journey represents a deliberate recalibration from the  sector to IT. This background provides me with a unique analytical lens—viewing network architecture not just as cables and code, but as critical assets requiring risk management, precision, and strategic foresight.</p>
+
                 </motion.div>
 
                 <motion.p
