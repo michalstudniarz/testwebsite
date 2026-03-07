@@ -510,41 +510,78 @@ export default function HomePage() {
             <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit">
               <SectionHeading title="Operation Logs" subtitle="Home Lab Topology & Project Archives." />
               
-              {/* Abstract Network Topology Visualization */}
-              <div className="mt-12 p-8 border border-foreground/10 rounded-xl bg-mid-gray-background/20 relative overflow-hidden min-h-[300px]">
-                <div className="absolute top-4 left-4 text-xs font-mono text-foreground/40">NET_TOPOLOGY_V1.2</div>
+              {/* Enhanced Network Topology Visualization */}
+              <div className="mt-12 p-6 border border-foreground/10 rounded-xl bg-mid-gray-background/20 relative overflow-y-auto max-h-[600px]">
+                <div className="absolute top-4 left-4 text-xs font-mono text-foreground/40 z-20">NET_TOPOLOGY_V2.0</div>
                 
-                {/* CSS Network Diagram */}
-                <div className="relative w-full h-full flex flex-col items-center justify-center gap-8 py-8">
-                  <div className="w-16 h-16 border-2 border-light-cyan-accent rounded-full flex items-center justify-center bg-charcoal-background z-10 relative">
-                    <Globe className="w-8 h-8 text-light-cyan-accent" />
-                    <div className="absolute -top-6 text-[10px] text-light-cyan-accent">WAN</div>
+                {/* Network Diagram - Based on provided topology */}
+                <div className="relative w-full flex flex-col items-center justify-start gap-4 py-8 px-2">
+                  {/* Internet ISP */}
+                  <div className="w-20 h-10 border-2 border-light-cyan-accent rounded-full flex items-center justify-center bg-charcoal-background z-10 relative">
+                    <Globe className="w-5 h-5 text-light-cyan-accent" />
                   </div>
-                  <div className="h-12 w-[2px] bg-foreground/20" />
-                  <div className="w-20 h-12 border-2 border-electric-blue-accent rounded flex items-center justify-center bg-charcoal-background z-10 relative">
-                    <Shield className="w-6 h-6 text-electric-blue-accent" />
-                    <div className="absolute -right-20 text-[10px] text-electric-blue-accent w-20">pfSense FW</div>
+                  <div className="text-[8px] text-light-cyan-accent font-mono whitespace-nowrap mb-1">Internet ISP</div>
+                  <div className="h-6 w-[2px] bg-light-cyan-accent/40" />
+                  
+                  {/* Vodafone Router */}
+                  <div className="w-24 h-10 border-2 border-electric-blue-accent rounded flex items-center justify-center bg-charcoal-background z-10 relative">
+                    <Wifi className="w-5 h-5 text-electric-blue-accent mr-1" />
+                    <span className="text-[8px] text-electric-blue-accent font-mono">Router</span>
                   </div>
-                  <div className="h-12 w-[2px] bg-foreground/20" />
-                  <div className="flex gap-8">
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="w-12 h-12 border border-foreground/40 rounded flex items-center justify-center bg-charcoal-background">
-                        <Server className="w-5 h-5 text-foreground/60" />
+                  <div className="text-[8px] text-electric-blue-accent font-mono whitespace-nowrap mb-1">Vodafone</div>
+                  <div className="h-6 w-[2px] bg-electric-blue-accent/40" />
+                  
+                  {/* pfSense Firewall */}
+                  <div className="w-24 h-10 border-2 border-light-cyan-accent rounded flex items-center justify-center bg-charcoal-background z-10 relative">
+                    <Shield className="w-5 h-5 text-light-cyan-accent mr-1" />
+                    <span className="text-[8px] text-light-cyan-accent font-mono">pfSense</span>
+                  </div>
+                  <div className="text-[8px] text-light-cyan-accent font-mono whitespace-nowrap mb-1">Firewall</div>
+                  <div className="h-6 w-[2px] bg-light-cyan-accent/40" />
+                  
+                  {/* VLANs Row */}
+                  <div className="flex gap-3 justify-center mb-2">
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-16 h-8 border border-electric-blue-accent/60 rounded flex items-center justify-center bg-charcoal-background/80">
+                        <span className="text-[7px] text-electric-blue-accent font-mono">VLAN 10</span>
                       </div>
-                      <span className="text-[10px] text-foreground/40">VLAN 10</span>
+                      <span className="text-[7px] text-foreground/40 font-mono">IoT</span>
                     </div>
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="w-12 h-12 border border-foreground/40 rounded flex items-center justify-center bg-charcoal-background">
-                        <Wifi className="w-5 h-5 text-foreground/60" />
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-16 h-8 border border-electric-blue-accent/60 rounded flex items-center justify-center bg-charcoal-background/80">
+                        <span className="text-[7px] text-electric-blue-accent font-mono">VLAN 20</span>
                       </div>
-                      <span className="text-[10px] text-foreground/40">IoT</span>
+                      <span className="text-[7px] text-foreground/40 font-mono">Cameras</span>
                     </div>
-                    <div className="flex flex-col items-center gap-2">
-                      <div className="w-12 h-12 border border-foreground/40 rounded flex items-center justify-center bg-charcoal-background">
-                        <Database className="w-5 h-5 text-foreground/60" />
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="w-16 h-8 border border-electric-blue-accent/60 rounded flex items-center justify-center bg-charcoal-background/80">
+                        <span className="text-[7px] text-electric-blue-accent font-mono">Trunk</span>
                       </div>
-                      <span className="text-[10px] text-foreground/40">Lab</span>
+                      <span className="text-[7px] text-foreground/40 font-mono">Port</span>
                     </div>
+                  </div>
+                  <div className="h-4 w-[2px] bg-electric-blue-accent/30" />
+                  
+                  {/* Core Switch */}
+                  <div className="w-28 h-10 border-2 border-light-cyan-accent rounded flex items-center justify-center bg-charcoal-background z-10 relative">
+                    <Server className="w-5 h-5 text-light-cyan-accent mr-1" />
+                    <span className="text-[8px] text-light-cyan-accent font-mono">Core Switch</span>
+                  </div>
+                  <div className="text-[8px] text-light-cyan-accent font-mono whitespace-nowrap mb-1">Netgear</div>
+                  <div className="h-4 w-[2px] bg-light-cyan-accent/40" />
+                  
+                  {/* Distribution Switch */}
+                  <div className="w-28 h-10 border-2 border-electric-blue-accent rounded flex items-center justify-center bg-charcoal-background z-10 relative">
+                    <Server className="w-5 h-5 text-electric-blue-accent mr-1" />
+                    <span className="text-[8px] text-electric-blue-accent font-mono">Dist. Switch</span>
+                  </div>
+                  <div className="text-[8px] text-electric-blue-accent font-mono whitespace-nowrap mb-1">Lab</div>
+                  <div className="h-4 w-[2px] bg-electric-blue-accent/40" />
+                  
+                  {/* Lab Servers */}
+                  <div className="w-24 h-10 border-2 border-light-cyan-accent rounded flex items-center justify-center bg-charcoal-background z-10 relative">
+                    <Database className="w-5 h-5 text-light-cyan-accent mr-1" />
+                    <span className="text-[8px] text-light-cyan-accent font-mono">Lab Servers</span>
                   </div>
                 </div>
               </div>
