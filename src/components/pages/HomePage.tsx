@@ -240,7 +240,7 @@ export default function HomePage() {
                 className="mb-6 flex items-center gap-4"
               >
                 <div className="px-4 py-1 border border-light-cyan-accent/30 bg-light-cyan-accent/5 rounded-full">
-                  <span className="text-light-cyan-accent font-mono text-xs tracking-widest uppercase">System Online • Southend-on-Sea, UK</span>
+                  <span className="text-light-cyan-accent font-mono text-xs tracking-widest uppercase">System Online • LEEDS, UK</span>
                 </div>
                 <div className="h-[1px] flex-grow bg-gradient-to-r from-light-cyan-accent/30 to-transparent max-w-[200px]" />
               </motion.div>
